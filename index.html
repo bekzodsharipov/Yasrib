@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasrib</title>
+    <style>
+.bg {position: absolute;z-index: -1;width: clamp(320px, 100vw, 441px);object-fit: cover;}a {text-decoration: none }* {margin: 0;padding: 0;box-sizing: border-box }body {font-family: "ubuntu-Regular", sans-serif }.container {width: 100%;max-width: 500px;padding-left: 20px;padding-right: 20px;margin-left: auto;margin-right: auto }.header__container {display: flex;flex-direction: column;align-items: center;justify-content: center }.header__box {padding: 10px 30px;border-bottom-left-radius: 30px;border-bottom-right-radius: 30px;border-bottom: 1px;border-right: 1px;border-left: 1px;border-top: none;border-style: solid;border-color: #C2C2C2;text-align: center;margin-bottom: 7px }.header__title {font-family: "ubuntu-Bold", sans-serif;font-size: 18px;margin-bottom: 4px;text-transform: uppercase }.header__text {font-family: "ubuntu-Regular", sans-serif;font-size: 14px;line-height: 115% }.hero__title {font-size: clamp(21px, 6.7vw, 26px);font-family: "ubuntu-Bold", sans-serif;text-align: center;line-height: 120%;text-transform: uppercase;margin-bottom: 11px;font-weight: 800;}.hero__title span {color: #D90508;}.hero__list {list-style: none;display: flex;flex-direction: column;gap: 6px;align-items: center;margin-bottom: 12px }.hero__list__item {display: flex;gap: 7px;align-items: center;padding: 8px;border: 0.5px solid #C2C2C2;background-color: #F6F6F6;border-radius: 10px;width: 100%;max-width: 324px }.hero__expert {object-fit: cover;max-width: 390px;width: 100%;}.hero__list__item p {font-family: Ubuntu, sans-serif;font-weight: 400;font-size: clamp(13px, 4.1vw, 16px);line-height: 125%;}.hero__list__item__box {width: 46px;height: 53px;border-radius: 5px;background-color: #BED7ED;position: relative;}.hero__list__item__box img {object-fit: contain;position: absolute;bottom: 0;right: 0;width: 46px;height: 53px;margin-bottom: -2px;}.timer {font-family: zuu, sans-serif;font-weight: 700;font-size: 26px;line-height: 120%;text-align: center;margin-bottom: 1px;}.hero__button {background-color: #FFCD00;box-shadow: 0px 6px 0px 0px #BF9A05;box-shadow: 0px 6px 20px 0px #FFCD0066;padding: 23.5px 0;max-width: 337px;width: 100%;text-align: center;border-radius: 100px;color: #3D3204;border: none;outline: none;font-size: clamp(18px, 6.2vw, 22px);font-family: "ubuntu-Bold", sans-serif;font-weight: 700 }.button-wrapper {display: flex;justify-content: center;margin-bottom: 15px }.img__container {display: flex;justify-content: center }
+    </style>
+    <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="./css/main.css" />
+    </noscript>
+</head>
+
+<body>
+    <div class="box">
+        <header class="header">
+            <div class="container header__container">
+                <img src="./images/bg.avif" width="390" height="80" decoding="async" loading="lazy" alt="bg" class="bg">
+                <div class="header__box">
+                    <h3 class="header__title">15-16-Феврал | 20:00</h3>
+                </div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container hero__container">
+                <h1 class="hero__title">
+                    <span>Рамазон ойини <br> Қуръон билан</span> қандай <br> қилиб мазмунли <br> ўтказиш мумкин?
+                </h1>
+                <ul class="hero__list">
+                    <li class="hero__list__item">
+                        <div class="hero__list__item__box">
+                            <img src="./images/1.avif" alt="1" width="46" height="34" decoding="async" loading="lazy">
+                        </div>
+                        <p>
+                            Рамазонда <b>Қуръондан <br> узоқлаштириб юборадиган</b> <br> 5 одатларни билиб оласиз
+                        </p>
+                    </li>
+                    <li class="hero__list__item">
+                        <div class="hero__list__item__box">
+                            <img src="./images/2.avif" alt="1" width="46" height="34" decoding="async" loading="lazy">
+                        </div>
+                        <p>
+                            Араб тилида <b>муҳим бўлган <br> қоидаларни</b> кўриб чиқамиз
+                        </p>
+                    </li>
+                    <li class="hero__list__item">
+                        <div class="hero__list__item__box">
+                            <img src="./images/3.avif" alt="1" width="46" height="34" decoding="async" loading="lazy">
+                        </div>
+                        <p>
+                            Ҳарф маҳражлари, овозни <br> тўғри йўналтириш ва <b>дангасалик <br> ҳақида</b> гаплашамиз
+                        </p>
+                    </li>
+                </ul>
+                <div class="timer" id="timer">2:00</div>
+                <div class="button-wrapper">
+                    <a href="https://t.me/+OjPfWE3t2Ic0MTVi" class="hero__button registerBtn">
+                        БEПУЛ ҚАТНАШИШ >>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container img__container">
+        <img src="./images/expert.avif" alt="expert" width="413" height="228" loading="lazy" decoding="async"
+            class="hero__expert">
+    </div>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", (() => { document.querySelectorAll(".registerBtn").forEach((t => { t.addEventListener("click", (() => { "function" == typeof fbq && fbq("track", "CompleteRegistration") })) })) })), document.addEventListener("DOMContentLoaded", (() => { const t = document.getElementById("timer"); if (!t) return; let e = 120; const n = () => { const n = Math.floor(e / 60), o = e % 60; t.textContent = `${n}:${String(o).padStart(2, "0")}` }; n(); const o = setInterval((() => { e--, e < 0 ? clearInterval(o) : n() }), 1e3) }));
+    </script>
+    <!-- Meta Pixel Code -->
+    <script defer>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '742095978592278');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=742095978592278&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</body>
+
+</html>
